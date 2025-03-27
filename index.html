@@ -1,49 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body onload="opera()">
+</head>
+<body onload="opera()">
     <h1>Calculator</h1>
     <div class="container">
-      <input type="text" id="quant" value="" />
-      <div class="button">
-        <div class="numbers">
-          <button class="value" value="1" id="one">1</button>
-          <button class="value" value="2" id="two">2</button>
-          <button class="value" value="3" id="three">3</button>
-
-          <button class="value" value="4" id="four">4</button>
-          <button class="value" value="5" id="five">5</button>
-          <button class="value" value="6" id="six">6</button>
-
-          <button class="value" value="7" id="seven">7</button>
-          <button class="value" value="8" id="eight">8</button>
-          <button class="value" value="9" id="nine">9</button>
-
-          <button class="value" value="." id="point">.</button>
-          <button class="value" value="0" id="zero">0</button>
-          <button class="value" value="=" id="compare" style="background-color: red;">=</button>
-          <button class="value" value="X" id="remove" style="background-color: #1565c0;">X</button>
-          <button class="value" value="%" id="mod" style="background-color: #1565c0;">%</button>
-          <button class="value" value="square" id="square" style="background-color: #1565c0;">Sq</button>
+        <input type="text" id="quant" value="" />
+        <div class="button">
+            <div class="numbers">
+                <button class="value" value="1" id="one">1</button>
+                <button class="value" value="2" id="two">2</button>
+                <button class="value" value="3" id="three">3</button>
+                <button class="operation" value="+" id="add">+</button>
+                <button class="value" value="4" id="four">4</button>
+                <button class="value" value="5" id="five">5</button>
+                <button class="value" value="6" id="six">6</button>
+                <button class="operation" value="-" id="sub">-</button>
+                <button class="value" value="7" id="seven">7</button>
+                <button class="value" value="8" id="eight">8</button>
+                <button class="value" value="9" id="nine">9</button>
+                <button class="operation" value="*" id="mul">*</button>
+                <button class="value" value="." id="point">.</button>
+                <button class="value" value="0" id="zero">0</button>
+                <button class="value" value="C" id="clear">C</button>
+                  
+                <button class="operation" value="/" id="div">/</button>
+                <button class="value" value="=" id="compare">=</button>
+                <button class="value" value="X" id="remove">X</button>
+                <button class="value" value="%" id="mod">%</button>
+                <button class="value" value="square" id="square">Sq</button>
+            </div>
         </div>
-
-        <div class="operators">
-          <button class="operator" value="C" id="clear">C</button>
-          <button class="operation" value="+" id="add">+</button>
-          <button class="operation" value="-" id="sub">-</button>
-          <button class="operation" value="*" id="mul">*</button>
-          <button class="operation" value="/" id="div">/</button>
-        </div>
-      </div>
     </div>
     <div class="footer-content">
-      <p>&copy; 2025 Abhijeet Jadhav. All rights reserved.</p>
+        <p>&copy; 2025 Abhijeet Jadhav. All rights reserved.</p>
     </div>
     <script src="calculator.js"></script>
-  </body>
+</body>
 </html>
