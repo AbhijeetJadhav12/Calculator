@@ -3,113 +3,84 @@
   margin: 0;
   box-sizing: border-box;
 }
-body {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
-}
-.container {
-  width: 25%;
 
+.container {
+  width: 90%;
+  max-width: 350px;
   margin: auto;
   background-color: #faf4f4;
-  margin-top: 1%;
-
+  margin-top: 2%;
   border-radius: 20px;
   box-shadow: 0 4px 10px rgba(58, 59, 59, 0.924);
+  padding: 20px;
 }
+
 h1 {
-  display: flex;
-  justify-content: center;
+  text-align: center;
   margin-top: 5%;
 }
+
 .button {
   display: flex;
-  justify-content: space-ar;
+  justify-content: space-between;
   align-items: center;
 }
+
 #quant {
-  width: 90%;
+  width: 100%;
   height: 50px;
   background-color: white;
   color: black;
   font-size: large;
   border: none;
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 5px;
-  margin: 3%;
+  margin-bottom: 15px;
   box-shadow: 0 4px 10px rgba(58, 59, 59, 0.924);
 }
-.numbers {
-  width: 250px;
-  height: 300px;
 
+/* ✅ FIXED GRID FOR NUMBERS */
+.numbers {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
-  align-items: center;
   gap: 5px;
 }
-.operators {
-  width: 50px;
-  height: 300px;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
 
-  justify-items: center;
-  align-items: center;
+/* ✅ FIXED GRID FOR OPERATORS */
+.operators {
+  display: flex;
+  flex-direction: column;
   gap: 5px;
-  width: 40%;
-  margin-left: 0;
 }
+
+.value,
+.operator,
+.operation {
+  width: 60px;
+  height: 60px;
+  font-size: large;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  margin: 2px;
+  text-align: center;
+}
+
 .value {
-  width: 60%;
-  height: 200px;
-  padding: 5%;
-  margin: 50px;
   background-color: blueviolet;
   color: white;
-  font-size: large;
-  cursor: pointer;
-  border: none;
-  border-radius: 10px;
-  margin: 2px;
-  height: 40px;
-  border-radius: 50%;
 }
+
 .operator {
-  width: 35%;
-  height: 300px;
   background-color: #dd1818;
   color: white;
-  font-size: large;
-  border: none;
-  cursor: pointer;
-  border-radius: 10px;
-  margin: 2px;
-  height: 40px;
-  border-radius: 50%;
 }
+
 .operation {
-  width: 35%;
-  height: 300px;
   background-color: #1565c0;
   color: white;
-  font-size: large;
-  cursor: pointer;
-  border: none;
-  border-radius: 50%;
-  border-radius: 10px;
-  margin: 2px;
-  height: 40px;
-  border-radius: 50%;
 }
 
-
-.footer-content {
-  text-align: center;
-  padding: 10px;
-}
 @media screen and (max-width: 768px) {
   .container {
     width: 80%;
@@ -121,28 +92,23 @@ h1 {
   }
 
   #quant {
-    width: 100%;
     font-size: medium;
     height: 40px;
   }
 
   .numbers {
-    width: 100%;
-    height: auto;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 8px;
   }
 
   .operators {
-    width: 100%;
-    height: auto;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    gap: 8px;
   }
 
-  .value, .operator, .operation {
-    width: 60px;
-    height: 60px;
+  .value,
+  .operator,
+  .operation {
+    width: 50px;
+    height: 50px;
     font-size: medium;
   }
 
@@ -163,27 +129,32 @@ h1 {
   }
 
   #quant {
-    width: 100%;
     font-size: small;
     height: 35px;
   }
 
   .numbers {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
+    gap: 6px;
+    margin: 5%;
   }
 
   .operators {
+    flex-direction: column;
+    margin-left: 20px;
+    justify-content: space-around;
     width: 100%;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
   }
 
-  .value, .operator, .operation {
-    width: 50px;
-    height: 50px;
+  .value,
+  .operator,
+  .operation {
+    width: 45px;
+    height: 45px;
     font-size: small;
   }
 
-  
+  .footer-content {
+    margin-top: 5vh;
+    font-size: small;
+  }
 }
